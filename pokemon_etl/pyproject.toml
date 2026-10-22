@@ -1,0 +1,25 @@
+[project]
+name = "pokemon-etl"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "duckdb>=1.5.6",
+    "pandas>=3.0.6",
+    "pyarrow>=25.0.1",
+    "python-dotenv>=1.2.4",
+    "requests>=2.34.2",
+    "sqlalchemy>=2.1.1",
+]
+
+[project.scripts]
+pokemon-etl = "pokemonapi:main"
+
+[build-system]
+requires = ["uv_build>=0.12.20,<0.13.0"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "pokemonapi"
+module-root = "src"
